@@ -351,3 +351,38 @@ h1, h2, h3, h4, h5, h6 {
 .typo img {
   max-width: 100%;
 }
+
+
+.toc-article{
+  position: absolute;
+  background: transparent;
+  top:2rem;
+  right: 3rem;
+  border:1px solid #bbb;
+  margin:1.5em 0 0.3em 1.5em;
+  padding: 1.2em 1em 0 1em;
+  max-width: 28%;
+}
+.toc-title{
+  font-size: 120%;
+}
+
+#toc{
+  line-height: 1em;
+  font-size: 0.9em;
+  float: right;    
+}
+#toc .toc{
+padding: 0;
+margin: 1em;
+line-height: 1.8em;   
+}
+#toc  .toc li{
+  list-style-type: none;  
+}
+#toc .toc-child{
+  margin-left: 1em;
+}
+#toc .toc-text{
+  color: #fff; 
+}
