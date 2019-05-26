@@ -2,10 +2,10 @@
 <html>
 
 <head><meta name="generator" content="Hexo 3.8.0">
-	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
-	<link rel="shortcut icon" href="/img/logo_miccall.png">
-	
-			    <title>
+    <link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
+    <link rel="shortcut icon" href="/img/logo_miccall.png">
+    
+            <title>
     大译象
     </title>
     <meta charset="utf-8">
@@ -30,29 +30,7 @@
         }
     </style>
 
-			    
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
-
+            
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
@@ -60,117 +38,907 @@
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
-	
-</head>
     
-		
-<!-- Layouts -->
+</head>
 
+    <!-- Layouts -->
 
-
-<!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css">
+    <!-- Single Price Page -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/demo.css">
 <link rel="stylesheet" href="/css/typo.css">
-<!-- 文章页 -->
+<style type="text/css">
+    .our-team {
+        /*padding: 30px 0 40px;*/
+        background: #f7f5ec;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #110;
+    }
+
+    .our-team .pic {
+        display: inline-block;
+        /*width: 130px;*/
+        /*height: 130px;*/
+        /*margin-bottom: 50px;*/
+        z-index: 1;
+        position: relative;
+    }
+
+    .our-team .pic:before {
+        content: "";
+        width: 100%;
+        height: 0;
+        /*border-radius: 50%;*/
+        background: #000000;
+        position: absolute;
+        bottom: 135%;
+        right: 0;
+        left: 0;
+        opacity: 0.2;
+        transform: scale(3);
+        transition: all 0.3s linear 0s;
+    }
+
+    .our-team:hover .pic:before {
+        height: 100%;
+    }
+
+    .our-team .pic:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        /*border-radius: 50%;*/
+        background: #000000;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .our-team .pic img {
+        width: 100%;
+        height: auto;
+        transform: scale(1);
+        transition: all 0.9s ease 0s;
+    }
+
+    .our-team:hover .pic img {
+        box-shadow: 0 0 0 14px #f7f5ec;
+        transform: scale(0.7);
+    }
+
+    .our-team .team-content {
+        margin-bottom: 30px;
+    }
+
+    .our-team .title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #4e5052;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+    }
+
+    .our-team .post {
+        display: block;
+        font-size: 15px;
+        color: #4e5052;
+        text-transform: capitalize;
+    }
+
+    .our-team .social {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #000;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        transition: all 0.5s ease 0s;
+    }
+
+    .our-team:hover .social {
+        bottom: 0;
+    }
+
+    .our-team .social li {
+        display: inline-block;
+    }
+
+    .our-team .social li a {
+        display: block;
+        padding: 10px;
+        font-size: 17px;
+        color: #fff;
+        transition: all 0.3s ease 0s;
+    }
+
+    .our-team .social li a:hover {
+        color: #110;
+        background: #f7f5ec;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .our-team {
+            margin-bottom: 30px;
+        }
+    }</style>
+
 <body class="is-loading">
-    <!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
-        <!-- Intro 头部显示 s -->
-        <!-- Intro 头部显示 e -->
-        <!-- Header 头部logo start -->
-        <header id="header">
+<!-- Wrapper 外包 s-->
+<div id="wrapper" class="fade-in">
+    <!-- Intro 头部显示 s -->
+    <!-- Intro 头部显示 e -->
+    <!-- Header 头部logo start -->
+    <header id="header">
     <a href="/" class="logo">大译象</a>
 </header>
-        <!-- Nav 导航条 start -->
-        <nav id="nav" class="special">
-            <ul class="menu links">
-			<!-- Homepage  主页  --> 
-			<li>
-	            <a href="/" rel="nofollow">主页</a>
-	        </li>
-			<!-- categories_name  分类   --> 
-	        
-	        <!-- archives  归档   --> 
-	        
-	        
-		        <!-- Pages 自定义   -->
-		        
-		        <li>
-		            <a href="/price/" title="专业服务">
-		                专业服务
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/group/" title="译象风采">
-		                译象风采
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/gallery/" title="翻译案例">
-		                翻译案例
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/about/" title="公司简介">
-		                公司简介
-		            </a>
-		        </li>
-		        
-		        <li>
-		            <a href="/join/" title="加入译象">
-		                加入译象
-		            </a>
-		        </li>
-		        
+    <!-- Nav 导航条 start -->
+    <nav id="nav" class="special">
+    <ul class="menu links">
+        <!-- Homepage  主页  -->
+        <li>
+            <a href="/" rel="nofollow">主页</a>
+        </li>
+        <!-- categories_name  分类   -->
+        
+        <!-- archives  归档   -->
+        
 
+        <!-- Pages 自定义   -->
+        
+            <li>
+                <a href="/price/" title="专业服务">
+                    专业服务
+                </a>
+            </li>
+        
+            <li>
+                <a href="/case/" title="翻译案例">
+                    翻译案例
+                </a>
+            </li>
+        
+            <li>
+                <a href="/group/" title="译象风采">
+                    译象风采
+                </a>
+            </li>
+        
+            <li>
+                <a href="/about/" title="公司简介">
+                    公司简介
+                </a>
+            </li>
+        
+            <li>
+                <a href="/join/" title="加入译象">
+                    加入译象
+                </a>
+            </li>
+        
 
-            </ul>
-            <!-- icons 图标   -->
-			<ul class="icons">
-                    
-                    <li>
-                        <a title="weibo" href="https://weibo.com" target="_blank" rel="noopener">
-                            <i class="icon fa fa-weibo"></i>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a title="home" href="http://www.transvisioner.com" target="_blank" rel="noopener">
-                            <i class="icon fa fa-home"></i>
-                        </a>
-                    </li>
-                    
-			</ul>
+    </ul>
+    <!-- icons 图标   -->
+    <ul class="icons">
+        
+            <li>
+                <a title="weibo" href="https://weibo.com" target="_blank" rel="noopener">
+                    <i class="icon fa fa-weibo"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a title="home" href="http://www.transvisioner.com" target="_blank" rel="noopener">
+                    <i class="icon fa fa-home"></i>
+                </a>
+            </li>
+        
+    </ul>
 </nav>
-
-        <div id="main">
-            <div class="post_page_title_img" style="height: 25rem;background-image: url(/img/5.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>专业服务</h2></a>               
-            </div>                            
-            <!-- Post -->        
-            <!-- Table of Contents -->
-            
-            <div class="typo" style="padding: 3rem;">            
-                <p>笔译、口译、培训、图书出版、音响设备、外语人才猎头</p>
-
-            </div>
-
-            <!-- Post Comments -->
-            
-
+    <div id="main">
+        <div class="post_page_title_img" style="height: 25rem;background-image: url(/img/5.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;">
+            <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2>专业服务</h2></a>
         </div>
-        <!-- Copyright 版权 start -->
-        <div id="copyright">
+        <div class="typo" style="padding:1rem 3rem;border-top: none;">
+            <h2>服务项目</h2>
+        </div>
+        <div class="demo">
+            <div class="container" style="padding:1rem 3rem">
+                <div class="row">
+                    
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/1.html">
+                                                <img src="/img/service/1.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/2.html">
+                                                <img src="/img/service/2.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/3.html">
+                                                <img src="/img/service/3.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/4.html">
+                                                <img src="/img/service/4.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/5.html">
+                                                <img src="/img/service/5.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-4 col-sm-6" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        
+                                            <a href="/price/6.html">
+                                                <img src="/img/service/6.jpg">
+                                            </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+        <div class="typo" style="padding:1rem 3rem;border-top: none;">
+            <h2>服务地域</h2>
+        </div>
+        <div class="demo">
+            <div class="container" style="padding:1rem 3rem">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="our-team" style="border:none;">
+                            <img style="width: 100%;" src="/img/map.jpg" alt="服务地域">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typo" style="padding:1rem 3rem;border-top: none;">
+            <h2>服务语种</h2>
+        </div>
+        <div class="demo">
+            <div class="container" style="padding:1rem 3rem">
+                <div class="row">
+                    
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">英语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">日语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">德语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">韩语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">俄语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">法语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">西班牙语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">芬兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">意大利语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">荷兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">瑞典语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">丹麦语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">白俄罗斯语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">挪威语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">波斯语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">拉丁语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">葡萄牙语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">罗马尼亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">乌克兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">波兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">捷克语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">斯洛伐克语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">保加利亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">爱尔兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">苏格兰语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">希腊语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">塞尔维亚克罗地亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">布列塔尼语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">阿尔巴尼亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">斯洛文尼亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">马其顿语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">泰国语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">越南语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">老挝语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">立陶宛语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">拉托维亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">亚美尼亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">匈牙利语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">土耳其语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">冰岛语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">阿塞拜疆语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">印地语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">哈萨克语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">吉尔吉斯语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">阿拉伯语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">乌兹别克语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">维吾尔语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">蒙古语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">乌尔都语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">孟加拉语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">尼泊尔语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">弗里西亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">卢森堡语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">马尔代夫语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">格鲁吉亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">缅甸语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">柬埔寨语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">莫尔多维亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">印度尼西亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">马来西亚语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">爪哇语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">威尔士语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">马达加斯加语</span>
+                                </div>
+                            </div>
+                        
+                            <div class="col-md-2 col-xs-6 col-sm-3" style="margin-top: 1rem;">
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="/img/lang/aier.jpg">
+                                    </div>
+                                    <span class="title" style="white-space: nowrap">爱沙尼亚语</span>
+                                </div>
+                            </div>
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright 版权 start -->
+    <div id="copyright">
     
     <span id="busuanzi_container_site_pv">&copy; 版权所有 大译象 2019  </span>    
 </div>
-    </div>
+</div>
 </body>
 
 
 
- 	
 </html>
